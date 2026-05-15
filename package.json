@@ -2,11 +2,7 @@
   "name": "project-tailwind",
   "version": "1.0.0",
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.2.1",
-    "tailwindcss": "^4.2.1"
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
   }
 }
