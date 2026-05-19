@@ -1,6 +1,15 @@
 export default {
   content: ["./public/**/*.{html,js}"],
+
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "0.625rem",
+      },
+    },
+
     extend: {
       colors: {
         brown: {
@@ -19,6 +28,17 @@ export default {
         "4xl": "2rem",
       },
 
+      letterSpacing: {
+        tightest: "-0.065em",
+      },
+
+      spacing: {
+        4.5: "1.125rem",
+        25: "6.25rem",
+        30: "7.5rem",
+        50: "12.5rem",
+      },
+
       fontFamily: {
         dana: ["Dana", "sans-serif"],
         danaMedium: ["Dana Medium", "sans-serif"],
@@ -28,5 +48,6 @@ export default {
       },
     },
   },
+
   plugins: [],
 };
