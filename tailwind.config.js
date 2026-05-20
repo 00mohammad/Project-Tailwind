@@ -39,6 +39,19 @@ export default {
         50: "12.5rem",
       },
 
+      backgroundImage: {
+        "home-mobile": "url"(""),
+        "home-desktop": "url"(""),
+      },
+
+      screens: {
+        xs: "480px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      },
+
       fontFamily: {
         dana: ["Dana", "sans-serif"],
         danaMedium: ["Dana Medium", "sans-serif"],
