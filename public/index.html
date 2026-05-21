@@ -9,11 +9,11 @@
     <link rel="Icon" href="/public/imgs/logo.png">
 </head>
 
-<body class="font-Dana">
+<body class="bg-gray-100 dark:bg-zinc-800">
 
     <!-- All App Icon -->
-     
-    <svg>
+
+    <svg class="hidden">
 
         <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor">
@@ -42,12 +42,14 @@
     </svg>
 
 
-    <header>
-        <div>
+    <header class="flex items-center w-[90%] h-24 pl-4 pr-10 py-5 mx-auto bg-black/50 rounded-3xl">
+
+
+        <div class="flex justify-between w-full">
 
             <!--  Logo and Menu  -->
 
-            <nav>
+            <nav class="flex gap-x-9">
 
                 <!--  Logo  -->
                 <div>
@@ -56,7 +58,8 @@
 
                 <!--  Menu  -->
 
-                <ul>
+                <ul class="flex gap-x-9">
+
                     <li>
                         <a href="#">صفحه اصلی</a>
                     </li>
@@ -68,7 +71,7 @@
 
                         <!--  Submenu  -->
 
-                        <ul>
+                        <ul class="hidden">
 
                             <li>
                                 <a href="#">قهوه ویژه</a>
@@ -119,11 +122,11 @@
 
             <!--  Cart and Theme Togtgle, Login Link -->
 
-            <div>
+            <div class="flex">
 
                 <!-- Cart Icon and Theme Switch Btn -->
 
-                <div>
+                <div class="flex gap-x-5">
 
                     <!-- Cart -->
 
@@ -145,7 +148,7 @@
 
                 <!-- Login Link -->
 
-                <a href="#">
+                <a href="#" class="flex">
                     <svg class="w-8 h-8">
                         <use xlink:href="#arrow-left-end-on-rectangle"></use>
                     </svg>

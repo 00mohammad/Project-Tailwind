@@ -1,6 +1,8 @@
 export default {
   content: ["./public/**/*.{html,js}"],
 
+  darkMode: "class",
+
   theme: {
     container: {
       center: true,
@@ -21,7 +23,7 @@ export default {
       },
 
       boxShadow: {
-        "shadow-normal": "0px 1px 10px rgba(0, 0, 0, 0.05)",
+        normal: "0px 1px 10px rgba(0, 0, 0, 0.05)",
       },
 
       borderRadius: {
@@ -40,8 +42,8 @@ export default {
       },
 
       backgroundImage: {
-        "home-mobile": "url"(""),
-        "home-desktop": "url"(""),
+        "home-mobile": "url('')",
+        "home-desktop": "url('')",
       },
 
       screens: {
@@ -53,11 +55,11 @@ export default {
       },
 
       fontFamily: {
-        dana: ["Dana", "sans-serif"],
-        danaMedium: ["Dana Medium", "sans-serif"],
-        danaDemiBold: ["Dana DemiBold", "sans-serif"],
-        morabbaLight: ["Morabba Light", "sans-serif"],
-        morabbaBold: ["Morabba Bold", "sans-serif"],
+        dana: ["Dana"],
+        danaMedium: ["Dana Medium"],
+        danaDemiBold: ["Dana DemiBold"],
+        morabbaLight: ["Morabba Light"],
+        morabbaBold: ["Morabba Bold"],
       },
     },
   },

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  
   /* colors */
 
   --color-brown-100: #ece0d1;
@@ -31,7 +32,6 @@
   /* breakpoint */
 
   --breakpoint-xs: 480px;
-
 }
 
 /* container */
