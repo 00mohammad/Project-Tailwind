@@ -9,7 +9,7 @@
     <link rel="Icon" href="/public/imgs/logo.png">
 </head>
 
-<body class="bg-gray-100 dark:bg-zinc-800">
+<body class="font-Dana bg-gray-100">
 
     <!-- All App Icon -->
 
@@ -42,14 +42,15 @@
     </svg>
 
 
-    <header class="flex items-center w-[90%] h-24 pl-4 pr-10 py-5 mx-auto bg-black/50 rounded-3xl">
+    <header
+        class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 px-10 py-5 mx-auto bg-black/50 rounded-3xl">
 
 
-        <div class="flex justify-between w-full">
+        <div class="flex items-center justify-between w-full">
 
             <!--  Logo and Menu  -->
 
-            <nav class="flex gap-x-9">
+            <nav class="flex items-center gap-x-9">
 
                 <!--  Logo  -->
                 <div>
@@ -58,9 +59,9 @@
 
                 <!--  Menu  -->
 
-                <ul class="flex gap-x-9">
+                <ul class="flex gap-x-9 text-xl text-gray-300">
 
-                    <li>
+                    <li class="font-Dana-Medium text-orange-200">
                         <a href="#">صفحه اصلی</a>
                     </li>
 
@@ -122,11 +123,11 @@
 
             <!--  Cart and Theme Togtgle, Login Link -->
 
-            <div class="flex">
+            <div class="flex gap-x-10 text-xl text-orange-200">
 
                 <!-- Cart Icon and Theme Switch Btn -->
 
-                <div class="flex gap-x-5">
+                <div class="flex items-center gap-x-5">
 
                     <!-- Cart -->
 
@@ -146,13 +147,17 @@
 
                 </div>
 
+                <!-- Divide Border -->
+
+                <span class="w-px h-14 bg-white/20"></span>
+
                 <!-- Login Link -->
 
-                <a href="#" class="flex">
-                    <svg class="w-8 h-8">
+                <a href="#" class="flex items-center gap-x-2.5">
+                    <svg class="w-8 h-8 rotate-180">
                         <use xlink:href="#arrow-left-end-on-rectangle"></use>
                     </svg>
-                    ورود | ثبت نام
+                    <span>ورود | ثبت‌نام</span>
                 </a>
             </div>
 
@@ -160,6 +165,8 @@
 
 
     </header>
+
+
 
 </body>
 

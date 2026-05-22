@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  
   /* colors */
 
   --color-brown-100: #ece0d1;
@@ -19,11 +18,18 @@
 
   /* fonts */
 
+  /*  Dana  */
+
   --font-Dana: "Dana";
-  --font-Dana-medium: "Dana Medium";
-  --font-Dana-demibold: "Dana DemiBold";
-  --font-Morabba-light: "Morabba Light";
-  --font-Morabba-bold: "Morabba Bold";
+  --font-Dana-Regular: "Dana Regular";
+  --font-Dana-Medium: "Dana Medium";
+  --font-Dana-Demibold: "Dana DemiBold";
+
+  /*  Morabba  */
+
+  --font-Morabba-Light: "Morabba Light";
+  --font-Morabba-Medium: "Morabba Medium";
+  --font-Morabba-Bold: "Morabba Bold";
 
   /* tracking */
 
