@@ -4,6 +4,7 @@ export default {
   darkMode: "class",
 
   theme: {
+    
     container: {
       center: true,
       padding: {
@@ -28,10 +29,6 @@ export default {
 
       borderRadius: {
         "4xl": "2rem",
-      },
-
-      letterSpacing: {
-        tightest: "-0.065em",
       },
 
       spacing: {
@@ -61,8 +58,14 @@ export default {
         morabbaLight: ["Morabba Light"],
         morabbaBold: ["Morabba Bold"],
       },
+
+      letterSpacing: {
+        tightest: "-0.065em",
+      },
+
     },
   },
+
 
   plugins: [],
 };
