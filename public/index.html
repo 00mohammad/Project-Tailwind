@@ -42,7 +42,7 @@
     </svg>
 
     <header
-        class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-20 px-10 py-5 mx-auto bg-black/50 rounded-3xl">
+        class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-20 px-10 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]">
         <div class="flex items-center justify-between w-full">
             <!--  Logo and Menu  -->
             <nav class="flex items-center gap-x-9">
@@ -51,37 +51,33 @@
                     <img src="/public/imgs/logo.png" alt="Golden Coffee">
                 </div>
                 <!--  Menu  -->
-                <ul class="flex gap-x-6 text-xl text-gray-300">
+                <ul class="flex gap-x-6 text-gray-300 tracking-tightest">
 
                     <li class="font-Dana-Medium text-orange-200">
                         <a href="#">صفحه اصلی</a>
                     </li>
 
                     <!-- Has Sub -->
-                     
-                    <li>
+
+
+
+
+                    <li class="relative">
                         <a href="#">فروشگاه</a>
+
                         <!--  Submenu  -->
-                        <ul class="hidden">
-                            <li>
-                                <a href="#">قهوه ویژه</a>
-                            </li>
-                            <li>
-                                <a href="#">ویژه در سطح جهانی</a>
-                            </li>
-                            <li>
-                                <a href="#">قهوه درجه یک</a>
-                            </li>
-                            <li>
-                                <a href="#">ترکیبات تجاری</a>
-                            </li>
-                            <li>
-                                <a href="#">کپسول قهوه</a>
-                            </li>
-                            <li>
-                                <a href="#">قهوه زینو برزیلی</a>
-                            </li>
-                        </ul>
+
+                        <div class="absolute w-52 p-6 space-y-4 text-zinc-700 dark:te bg-white dark:text-zinc-700 text-base border-t-[3px]
+                         border-orange-300 tracking-normal shadow-normal rounded-2xl child:block child:transition-colors child-hover: text-orange-300">
+
+                            <a href="#">قهوه ویژه</a>
+                            <a href="#">ویژه در سطح جهانی</a>
+                            <a href="#">قهوه درجه یک</a>
+                            <a href="#">ترکیبات تجاری</a>
+                            <a href="#">کپسول قهوه</a>
+                            <a href="#">قهوه زینو برزیلی</a>
+
+                        </div>
 
                     </li>
                     <li>
@@ -97,10 +93,12 @@
                         <a href="#">تماس با ما</a>
                     </li>
                 </ul>
-                
+
+
+
             </nav>
             <!--  Cart and Theme Togtgle, Login Link -->
-            <div class="flex gap-x-10 text-xl text-orange-200">
+            <div class="flex gap-x-10  text-orange-200 tracking-tightest">
                 <!-- Cart Icon and Theme Switch Btn -->
                 <div class="flex items-center gap-x-5">
                     <!-- Cart -->

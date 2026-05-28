@@ -1,10 +1,9 @@
-export default {
+module.exports = {
   content: ["./public/**/*.{html,js}"],
 
   darkMode: "class",
 
   theme: {
-    
     container: {
       center: true,
       padding: {
@@ -62,10 +61,8 @@ export default {
       letterSpacing: {
         tightest: "-0.065em",
       },
-
     },
   },
-
 
   plugins: [],
 };
