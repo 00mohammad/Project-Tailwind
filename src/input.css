@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* custom variants */
 
 @custom-variant child (& > *);
 @custom-variant child-hover (& > *:hover);
 
-
 @theme {
-  
   /* colors */
 
   --color-brown-100: #ece0d1;

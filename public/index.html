@@ -7,9 +7,15 @@
     <title>Project Tailwind</title>
     <link href="./styles/app.css" rel="stylesheet">
     <link rel="Icon" href="/public/imgs/logo.png">
+    <script type="text/javascript">
+        document.documentElement.classList.toggle(
+            'dark',
+            localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        )
+    </script>
 </head>
 
-<body class="font-Dana bg-gray-100">
+<body class="font-Dana bg-gray-100 dark:bg-zinc-800">
 
     <!-- All App Icon -->
 
@@ -41,34 +47,29 @@
 
     </svg>
 
+
     <header
         class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-20 px-10 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]">
         <div class="flex items-center justify-between w-full">
             <!--  Logo and Menu  -->
-            <nav class="flex items-center gap-x-9">
+            <nav class="flex items-center gap-x-9 h-14">
                 <!--  Logo  -->
                 <div>
                     <img src="/public/imgs/logo.png" alt="Golden Coffee">
                 </div>
                 <!--  Menu  -->
-                <ul class="flex gap-x-6 text-gray-300 tracking-tightest">
-
+                <ul class="flex gap-x-6 h-full text-gray-300 tracking-tightest child:leading-14">
                     <li class="font-Dana-Medium text-orange-200">
                         <a href="#">صفحه اصلی</a>
                     </li>
-
                     <!-- Has Sub -->
-
-
-
-
-                    <li class="relative">
-                        <a href="#">فروشگاه</a>
-
+                    <li class="relative group">
+                        <a href="#" class="group-hover:text-orange-300 transition-colors">فروشگاه</a>
                         <!--  Submenu  -->
-
-                        <div class="absolute w-52 p-6 space-y-4 text-zinc-700 dark:te bg-white dark:text-zinc-700 text-base border-t-[3px]
-                         border-orange-300 tracking-normal shadow-normal rounded-2xl child:block child:transition-colors child-hover: text-orange-300">
+                        <div
+                            class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible w-52 p-6 space-y-4 text-zinc-700
+                             dark:text-white bg-white dark:bg-zinc-700 text-base border-t-[3px] border-orange-300 tracking-normal shadow-normal 
+                             rounded-2xl transition-all child:inline-block child:transition-colors child-hover:text-orange-300">
 
                             <a href="#">قهوه ویژه</a>
                             <a href="#">ویژه در سطح جهانی</a>
@@ -78,7 +79,6 @@
                             <a href="#">قهوه زینو برزیلی</a>
 
                         </div>
-
                     </li>
                     <li>
                         <a href="#">دیکشنری</a>
@@ -93,9 +93,6 @@
                         <a href="#">تماس با ما</a>
                     </li>
                 </ul>
-
-
-
             </nav>
             <!--  Cart and Theme Togtgle, Login Link -->
             <div class="flex gap-x-10  text-orange-200 tracking-tightest">
@@ -103,14 +100,22 @@
                 <div class="flex items-center gap-x-5">
                     <!-- Cart -->
                     <div>
-                        <svg class="w-8 h-8">
-                            <use xlink:href="#shopping-cart"></use>
-                        </svg>
+                        <!-- Cart Icon Haver -->
+                        <div class="py-3">
+                            <svg class="w-8 h-8">
+                                <use href="#shopping-cart"></use>
+                            </svg>
+                        </div>
+                        <!-- Cart Box -->
+                        <div></div>
                     </div>
                     <!-- Theme Switch Btn -->
-                    <div>
-                        <svg class="w-8 h-8">
-                            <use xlink:href="#moon"></use>
+                    <div class="cursor-pointer" id="toggle-theme">
+                        <svg class="inline-block dark:hidden w-8 h-8">
+                            <use href="#moon"></use>
+                        </svg>
+                        <svg class="hidden dark:inline-block w-8 h-8">
+                            <use href="#sun"></use>
                         </svg>
                     </div>
                 </div>
@@ -119,7 +124,7 @@
                 <!-- Login Link -->
                 <a href="#" class="flex items-center gap-x-2.5">
                     <svg class="w-8 h-8 rotate-180">
-                        <use xlink:href="#arrow-left-end-on-rectangle"></use>
+                        <use href="#arrow-left-end-on-rectangle"></use>
                     </svg>
                     <span>ورود | ثبت‌نام</span>
                 </a>
@@ -129,6 +134,7 @@
 
     </header>
 
+    <Script src="../public/js/script.js"></Script>
 
 </body>
 
