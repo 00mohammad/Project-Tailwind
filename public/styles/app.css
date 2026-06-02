@@ -19,8 +19,13 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --tracking-tighter: -0.05em;
     --tracking-normal: 0em;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
@@ -29,6 +34,8 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --tracking-tightest: -0.065em;
+    --font-dana: "Dana", sans-serif;
+    --font-dana-medium: "Dana Medium", sans-serif;
   }
 }
 @layer base {
@@ -304,6 +311,12 @@
   .table {
     display: table;
   }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -316,6 +329,12 @@
   .h-full {
     height: 100%;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
@@ -324,6 +343,9 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[400px\] {
+    width: 400px;
   }
   .w-full {
     width: 100%;
@@ -348,6 +370,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -424,6 +449,9 @@
       );
     }
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
@@ -436,13 +464,28 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .font-dana-medium {
+    font-family: var(--font-dana-medium);
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
   .tracking-normal {
     --tw-tracking: var(--tracking-normal);
     letter-spacing: var(--tracking-normal);
+  }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
   }
   .tracking-tightest {
     --tw-tracking: var(--tracking-tightest);
@@ -453,6 +496,9 @@
   }
   .text-orange-200 {
     color: var(--color-orange-200);
+  }
+  .text-orange-300 {
+    color: var(--color-orange-300);
   }
   .text-zinc-700 {
     color: var(--color-zinc-700);
@@ -548,11 +594,6 @@
       display: inline-block;
     }
   }
-  .dark\:w-8 {
-    &:where(.dark, .dark *) {
-      width: calc(var(--spacing) * 8);
-    }
-  }
   .dark\:bg-zinc-700 {
     &:where(.dark, .dark *) {
       background-color: var(--color-zinc-700);
@@ -601,60 +642,43 @@
     }
   }
 }
-@layer base {
-  body {
-    font-family: "Dana";
-    background-image: url("../imgs/headerBgDesktop.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-@layer utilities {
-  .font-Dana {
-    font-family: "Dana";
-  }
-  .font-Dana-Regular {
-    font-family: "Dana Regular";
-  }
-  .font-Dana-Medium {
-    font-family: "Dana Medium";
-  }
-  .font-Dana-Demibold {
-    font-family: "Dana DemiBold";
-  }
-  .font-Morabba-Light {
-    font-family: "Morabba Light";
-  }
-  .font-Morabba-Medium {
-    font-family: "Morabba Medium";
-  }
-  .font-Morabba-Bold {
-    font-family: "Morabba Bold";
-  }
-}
 @font-face {
   font-family: "Dana";
   src: url("../fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Dana Medium";
   src: url("../fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Dana DemiBold";
   src: url("../fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba Light";
   src: url("../fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba Medium";
   src: url("../fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "Morabba Bold";
   src: url("../fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@layer base {
+  body {
+    font-family: var(--font-dana);
+    background-image: url("../imgs/headerBgDesktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @property --tw-space-y-reverse {
   syntax: "*";
