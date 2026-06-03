@@ -34,6 +34,10 @@
   /* Breakpoints */
   --breakpoint-xs: 480px;
 
+  /* spacing */
+  --spacing-30: 120px;
+  --spacing-100: 400px;
+
   /* Fonts */
   --font-dana: "Dana";
   --font-dana-medium: "Dana Medium";
@@ -91,7 +95,7 @@
 @layer base {
   body {
     font-family: var(--font-dana);
-    background-image: url("/imgs/headerBgDesktop.webp");
+    background-image: url("/public/imgs/headerBgDesktop.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }
