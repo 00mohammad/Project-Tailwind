@@ -75,7 +75,7 @@
                         <div
                             class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible w-52 p-6 space-y-4 text-zinc-700
                              dark:text-white bg-white dark:bg-zinc-700 text-base border-t-[3px] border-orange-300 tracking-normal shadow-normal 
-                             rounded-2xl transition-all child:inline-block child:transition-colors child-hover:text-orange-300">
+                             rounded-2xl transition-all delay-75 child:inline-block child:transition-colors child-hover:text-orange-300">
 
                             <a href="#">قهوه ویژه</a>
                             <a href="#">ویژه در سطح جهانی</a>
@@ -112,9 +112,9 @@
                                 <use href="#shopping-cart"></use>
                             </svg>
                         </div>
-                        <!-- Cart Box opacity-0 invisible -->
-                        <div class="absolute top-full left-0 group-hover:opacity-100 group-hover:visible w-100 p-5 bg-white dark:bg-zinc-700
-                            border-t-[3px] border-orange-300 shadow-normal rounded-2xl transition-all">
+                        <!-- Cart Box  -->
+                        <div class="absolute opacity-0 invisible top-full left-0 group-hover:opacity-100 group-hover:visible w-100 p-5 bg-white dark:bg-zinc-700
+                            border-t-[3px] border-orange-300 shadow-normal rounded-2xl transition-all delay-75">
                             <!-- Cart Haver -->
                             <div class="flex items-center justify-between font-dana-medium text-xs tracking-tighter">
                                 <span class="text-gray-300">1 مورد</span>
@@ -126,13 +126,34 @@
                                 </a>
                             </div>
                             <!-- Cart Body-->
-                            <div class="mt-5 pb-6 border-b border-b-gray-300 dark:border-b-white/10">
-
+                            <div
+                                class="pb-1 border-b border-b-gray-300 dark:border-b-white/10 divide-y dark:divide-white/10 child:py-5">
 
                                 <div class="flex gap-x-2.5">
                                     <img src="./imgs/products/p1.png" class="w-30 h-30" alt="Product 1">
                                     <div class="flex flex-col justify-between">
-                                        <h4 class="font-dana-medium text-zinc-700 dark:text-white text-base">قهوه اسپرسو
+                                        <h4
+                                            class="font-dana-medium text-zinc-700 dark:text-white text-base  line-clamp-2">
+                                            قهوه اسپرسو
+                                            بن
+                                            مانو مدل پریسکا 250 گرمی</h4>
+                                        <span
+                                            class="text-teal-600 dark:text-emerald-500 mt-6 text-xs font-dana-medium tracking-tighter">14.500
+                                            تومان
+                                            تخفیف</span>
+                                        <div class="text-zinc-700 dark:text-white font-dana-demibold">
+                                            175,000
+                                            <span class="font-dana text-sm ">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="flex gap-x-2.5">
+                                    <img src="./imgs/products/p2.png" class="w-30 h-30" alt="Product 1">
+                                    <div class="flex flex-col justify-between">
+                                        <h4
+                                            class="font-dana-medium text-zinc-700 dark:text-white text-base line-clamp-2">
+                                            قهوه اسپرسو
                                             بن
                                             مانو مدل پریسکا 250 گرمی</h4>
                                         <span
@@ -144,44 +165,22 @@
                                             <span class="font-dana text-sm">تومان</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="flex gap-x-2.5">
-                                    <img src="./imgs/products/p1.png" class="w-30 h-30" alt="Product 1">
-                                    <div class="flex flex-col justify-between">
-                                        <h4 class="font-dana-medium text-zinc-700 dark:text-white text-base">قهوه اسپرسو
-                                            بن
-                                            مانو مدل پریسکا 250 گرمی</h4>
-                                        <span
-                                            class="text-teal-600 dark:text-emerald-500 mt-6 text-xs font-dana-medium tracking-tighter">14.500
-                                            تومان
-                                            تخفیف</span>
-                                        <div class="text-zinc-700 dark:text-white font-dana-demibold">
-                                            175,000
-                                            <span class="font-dana text-sm">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex gap-x-2.5">
-                                    <img src="./imgs/products/p1.png" class="w-30 h-30" alt="Product 1">
-                                    <div class="flex flex-col justify-between">
-                                        <h4 class="font-dana-medium text-zinc-700 dark:text-white text-base">قهوه اسپرسو
-                                            بن
-                                            مانو مدل پریسکا 250 گرمی</h4>
-                                        <span
-                                            class="text-teal-600 dark:text-emerald-500 mt-6 text-xs font-dana-medium tracking-tighter">14.500
-                                            تومان
-                                            تخفیف</span>
-                                        <div class="text-zinc-700 dark:text-white font-dana-demibold">
-                                            175,000
-                                            <span class="font-dana text-sm">تومان</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
+                                </div> -->
                             </div>
                             <!-- Cart footer-->
-                            <div></div>
+                            <div class="flex justify-between mt-5">
+                                <div>
+                                    <span class="font-dana-medium text-gray-300 mt-6 text-xs tracking-tighter">مبلغ قابل
+                                        پرداخت</span>
+                                    <div class="text-zinc-700 dark:text-white font-dana-demibold">
+                                        350,000
+                                        <span class="font-dana text-sm">تومان</span>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="flex items-center justify-center w-32 h-14 text-white bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 dark:hover:bg-emerald-600 transition-colors rounded-xl tra">ثبت
+                                    سفارش</a>
+                            </div>
                         </div>
                     </div>
                     <!-- Theme Switch Btn -->
