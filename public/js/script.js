@@ -1,15 +1,15 @@
-const toggleThemeBtn = document.querySelector("#toggle-theme");
+const toggleThemeBtns = document.querySelectorAll(".toggle-theme");
 
-toggleThemeBtn.addEventListener("click", () => {
+toggleThemeBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
 
-    if (localStorage.theme === "dark") {
-        document.documentElement.classList.remove("dark");
-        localStorage.theme = "light";
-    }
+        if (localStorage.theme === "dark") {
+            document.documentElement.classList.remove("dark");
+            localStorage.theme = "light";
+        } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        }
 
-    else {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-    }
-
-})
+    });
+});
