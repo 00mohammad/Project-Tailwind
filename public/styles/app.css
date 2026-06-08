@@ -368,6 +368,10 @@
     margin-top: calc(var(--spacing) * 8);
   }
 
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -539,6 +543,14 @@
     }
   }
 
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
@@ -644,6 +656,14 @@
     background-color: var(--color-gray-100);
   }
 
+  .bg-orange-200\/20 {
+    background-color: color-mix(in srgb, oklch(90.1% 0.076 70.697) 20%, transparent);
+
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-orange-200) 20%, transparent);
+    }
+  }
+
   .bg-teal-600 {
     background-color: var(--color-teal-600);
   }
@@ -694,6 +714,10 @@
 
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
+  }
+
+  .pr-2\.5 {
+    padding-right: calc(var(--spacing) * 2.5);
   }
 
   .pb-1 {
@@ -987,6 +1011,12 @@
     }
   }
 
+  .child\:pr-2\.5 {
+    &>* {
+      padding-right: calc(var(--spacing) * 2.5);
+    }
+  }
+
   .child\:leading-14 {
     &>* {
       --tw-leading: calc(var(--spacing) * 14);
@@ -1051,6 +1081,45 @@
     background-image: url("/public/imgs/headerBgDesktop.webp");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+@layer components {
+  .submenu {
+    margin-top: calc(var(--spacing) * 3);
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--spacing) * 3);
+    padding-right: calc(var(--spacing) * 7);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    color: var(--color-zinc-600);
+
+    &:where(.dark, .dark *) {
+      color: var(--color-white);
+    }
+  }
+
+  .submenu__item--active {
+    padding-right: calc(var(--spacing) * 2.5);
+    color: var(--color-orange-300);
+    padding-right: 10px;
+    position: relative;
+    color: #FDBA74;
+  }
+
+  .submenu__item--active::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #FDBA74;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 }
 

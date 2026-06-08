@@ -8,7 +8,7 @@ toggleThemeBtns.forEach((btn) => {
             document.documentElement.classList.remove("dark");
             localStorage.theme = "light";
         }
-         else {
+        else {
             document.documentElement.classList.add("dark");
             localStorage.setItem("theme", "dark");
         }
