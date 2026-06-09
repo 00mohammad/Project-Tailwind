@@ -440,7 +440,7 @@
     >
       <!-- Nav Icon -->
 
-      <div>
+      <div class="nav-icon">
         <svg class="w-6 h-6 text-zinc-700 dark:text-white">
           <use href="#bars-3"></use>
         </svg>
@@ -449,7 +449,7 @@
       <!-- Nav -->
 
       <div
-        class="fixed top-0 bottom-0 right-0 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20"
+        class="nav fixed top-0 bottom-0 -right-64 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20 overflow-y-auto transition-all"
       >
         <!-- Nav Header -->
 
@@ -464,15 +464,17 @@
               <use href="#logo-type"></use>
             </svg>
           </div>
-          <svg class="w-6 h-6 text-zinc-600 dark:text-white">
-            <use href="#x-mark"></use>
-          </svg>
+          <div class="nav-close-btn">
+            <svg class="w-6 h-6 text-zinc-600 dark:text-white">
+              <use href="#x-mark"></use>
+            </svg>
+          </div>
         </div>
 
         <!-- Nav Menu -->
 
         <div
-          class="flex items-center bg-orange-200/20 text-orange-300 mb-4 pr-2.5 h-10 rou"
+          class="flex items-center bg-orange-200/20 text-orange-300 mb-4 pr-2.5 h-10 rounded-md"
         >
           <a href="#" class="flex items-center gap-x-2">
             <svg class="w-5 h-5">
@@ -484,7 +486,7 @@
 
         <ul class="child:pr-2.5 space-y-6 text-zinc-600 dark:text-white">
           <li>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between transition-colors">
               <a href="#" class="flex items-center gap-x-2">
                 <svg class="w-5 h-5">
                   <use href="#shopping-cart"></use>
@@ -492,7 +494,7 @@
                 فروشگاه
               </a>
 
-              <span class="submenu-opne-btn">
+              <span class="submenu-open-btn">
                 <svg class="w-4 h-4">
                   <use href="#chevron-down"></use>
                 </svg>
@@ -549,7 +551,7 @@
         <!-- Nav Footer -->
 
         <div
-          class="flex flex-col items-start gap-y-6 text-orange-300 pt-8 px-2.5 mt-8 border-t border-t-gray-100 dark:border-t-white/10"
+          class="flex flex-col items-start gap-y-6 text-orange-300 py-8 px-2.5 mt-8 border-t border-t-gray-100 dark:border-t-white/10"
         >
           <a href="" class="inline-flex items-center gap-x-2">
             <svg class="w-5 h-5 rotate-180">
@@ -598,9 +600,7 @@
       </div>
     </div>
 
-    <div
-      class="overlay md:hidden fixed top-0 left-0 w-full h-full bg-black/40 z-10"
-    ></div>
+    <div class="overlay"></div>
 
     <script src="../public/js/script.js"></script>
   </body>
