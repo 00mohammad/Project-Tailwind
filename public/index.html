@@ -598,9 +598,58 @@
           <use href="#shopping-cart"></use>
         </svg>
       </div>
+
+      <!-- Cart -->
+
+      <div
+        class="fixed top-0 bottom-0 left-0 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20 overflow-y-auto transition-all"
+      >
+        <!-- Cart Header -->
+
+        <div
+          class="flex items-center justify-between pb-5 mb-5 border-b border-b-gray-300 dark:border-b-white/10"
+        >
+          <div class="cart-close-btn">
+            <svg class="w-6 h-6 text-zinc-600 dark:text-white">
+              <use href="#x-mark"></use>
+            </svg>
+          </div>
+
+          <span class="text-zinc-700 dark:text-white font-dana-medium"
+            >سبد خرید</span
+          >
+        </div>
+
+        <!-- Cart body -->
+
+        <!-- Cart Footer -->
+
+        <div class="flex items-center gap-x-4">
+          <a
+            href="#"
+            class="flex items-center justify-center w-28 h-11 text-white bg-teal-600 dark:bg-emerald-500 rounded-xl"
+            >ثبت سفارش</a
+          >
+
+          <div class="flex justify-between mt-5">
+            <div>
+              <span
+                class="font-dana-medium text-gray-300 mt-6 text-xs tracking-tighter"
+                >مبلغ قابل پرداخت</span
+              >
+              <div class="text-zinc-700 dark:text-white font-dana-demibold">
+                350,000
+                <span class="font-dana text-xs">تومان</span>
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
     </div>
 
-    <div class="overlay"></div>
+    <div class="overlay overlay-visible"></div>
 
     <script src="../public/js/script.js"></script>
   </body>
