@@ -20,34 +20,64 @@ toggleThemeBtns.forEach((btn) => {
     }
   });
 });
-submenuOpenBtn.addEventListener("click", (e) => {
-  e.currentTarget.parentElement.classList.toggle("text-orange-300");
-  submenu.classList.toggle("submenu--open");
-});
+
+if (submenuOpenBtn && submenu) {
+  submenuOpenBtn.addEventListener("click", (e) => {
+    e.currentTarget.parentElement.classList.toggle("text-orange-300");
+    submenu.classList.toggle("submenu--open");
+  });
+}
 
 function closeNav() {
-  nav.classList.remove("right-0");
-  nav.classList.add("-right-64");
-  overlay.classList.remove("overlay--visible");
+  if (nav) {
+    nav.classList.remove("right-0");
+    nav.classList.add("-right-64");
+  }
+  if (overlay) {
+    overlay.classList.remove("overlay--visible");
+  }
 }
+
 function closeCart() {
-  cart.classList.remove("left-0");
-  cart.classList.add("-left-64");
-  overlay.classList.remove("overlay--visible");
+  if (cart) {
+    cart.classList.remove("left-0");
+    cart.classList.add("-left-64");
+  }
+  if (overlay) {
+    overlay.classList.remove("overlay--visible");
+  }
 }
 
-navOpenBtn.addEventListener("click", () => {
-  nav.classList.remove("-right-64");
-  nav.classList.add("right-0");
-  overlay.classList.add("overlay--visible");
-  overlay.addEventListener("click", closeNav);
-});
-cartOpenBtn.addEventListener("click", () => {
-  cart.classList.remove("-left-64");
-  cart.classList.add("left-0");
-  overlay.classList.add("overlay--visible");
-  overlay.addEventListener("click", closeCart);
-});
+if (navOpenBtn) {
+  navOpenBtn.addEventListener("click", () => {
+    if (nav) {
+      nav.classList.remove("-right-64");
+      nav.classList.add("right-0");
+    }
+    if (overlay) {
+      overlay.classList.add("overlay--visible");
+      overlay.addEventListener("click", closeNav);
+    }
+  });
+}
 
-navCloseBtn.addEventListener("click", closeNav);
-cartCloseBtn.addEventListener("click", closeCart);
+if (cartOpenBtn) {
+  cartOpenBtn.addEventListener("click", () => {
+    if (cart) {
+      cart.classList.remove("-left-64");
+      cart.classList.add("left-0");
+    }
+    if (overlay) {
+      overlay.classList.add("overlay--visible");
+      overlay.addEventListener("click", closeCart);
+    }
+  });
+}
+
+if (navCloseBtn) {
+  navCloseBtn.addEventListener("click", closeNav);
+}
+
+if (cartCloseBtn) {
+  cartCloseBtn.addEventListener("click", closeCart);
+}

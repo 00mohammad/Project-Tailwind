@@ -4,7 +4,6 @@ module.exports = {
   darkMode: "class",
 
   theme: {
-
     container: {
       center: true,
       padding: {
@@ -39,8 +38,8 @@ module.exports = {
       },
 
       backgroundImage: {
-        "home-mobile": "url('')",
-        "home-desktop": "url('')",
+        "home-mobile": "url('../imgs/headerBgMobile.webp')",
+        "home-desktop": "url('../imgs/headerBgDesktop.webp')",
       },
 
       screens: {
@@ -62,9 +61,14 @@ module.exports = {
       letterSpacing: {
         tightest: "-0.065em",
       },
-
     },
 
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
   },
 
   plugins: [],
