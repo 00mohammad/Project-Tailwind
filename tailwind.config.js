@@ -38,8 +38,8 @@ module.exports = {
       },
 
       backgroundImage: {
-        "home-mobile": "url('../imgs/headerBgMobile.webp')",
         "home-desktop": "url('../imgs/headerBgDesktop.webp')",
+        "home-mobile": "url('../imgs/headerBgMobile.webp')",
       },
 
       screens: {
