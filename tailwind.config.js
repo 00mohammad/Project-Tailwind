@@ -1,75 +1,75 @@
-module.exports = {
-  content: ["./public/**/*.{html,js}"],
+// module.exports = {
+//   content: ["./public/**/*.{html,js}"],
 
-  darkMode: "class",
+//   darkMode: "class",
 
-  theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        lg: "0.625rem",
-      },
-    },
+//   theme: {
+//     container: {
+//       center: true,
+//       padding: {
+//         DEFAULT: "1rem",
+//         lg: "0.625rem",
+//       },
+//     },
 
-    extend: {
-      colors: {
-        brown: {
-          100: "#ECE0D1",
-          300: "#DBC1AC",
-          600: "#967259",
-          900: "#634832",
-        },
-      },
+//     extend: {
+//       colors: {
+//         brown: {
+//           100: "#ECE0D1",
+//           300: "#DBC1AC",
+//           600: "#967259",
+//           900: "#634832",
+//         },
+//       },
 
-      boxShadow: {
-        normal: "0px 1px 10px rgba(0, 0, 0, 0.05)",
-      },
+//       boxShadow: {
+//         normal: "0px 1px 10px rgba(0, 0, 0, 0.05)",
+//       },
 
-      borderRadius: {
-        "4xl": "2rem",
-      },
+//       borderRadius: {
+//         "4xl": "2rem",
+//       },
 
-      spacing: {
-        4.5: "1.125rem",
-        25: "6.25rem",
-        30: "7.5rem",
-        50: "12.5rem",
-      },
+//       spacing: {
+//         4.5: "1.125rem",
+//         25: "6.25rem",
+//         30: "7.5rem",
+//         50: "12.5rem",
+//       },
 
-      backgroundImage: {
-        "home-desktop": "url('../imgs/headerBgDesktop.webp')",
-        "home-mobile": "url('../imgs/headerBgMobile.webp')",
-      },
+//       backgroundImage: {
+//         "home-desktop": "url('../imgs/headerBgDesktop.webp')",
+//         "home-mobile": "url('../imgs/headerBgMobile.webp')",
+//       },
 
-      screens: {
-        xs: "480px",
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-      },
+//       screens: {
+//         xs: "480px",
+//         sm: "640px",
+//         md: "768px",
+//         lg: "1024px",
+//         xl: "1280px",
+//       },
 
-      fontFamily: {
-        dana: ["Dana"],
-        danaMedium: ["Dana Medium"],
-        danaDemiBold: ["Dana DemiBold"],
-        morabbaLight: ["Morabba Light"],
-        morabbaBold: ["Morabba Bold"],
-      },
+//       fontFamily: {
+//         dana: ["Dana"],
+//         danaMedium: ["Dana Medium"],
+//         danaDemiBold: ["Dana DemiBold"],
+//         morabbaLight: ["Morabba Light"],
+//         morabbaBold: ["Morabba Bold"],
+//       },
 
-      letterSpacing: {
-        tightest: "-0.065em",
-      },
-    },
+//       letterSpacing: {
+//         tightest: "-0.065em",
+//       },
+//     },
 
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-    },
-  },
+//     screens: {
+//       sm: "640px",
+//       md: "768px",
+//       lg: "1024px",
+//       xl: "1280px",
+//     },
+//   },
 
-  plugins: [],
-};
+//   plugins: [],
+// };
