@@ -161,10 +161,9 @@
   }
 
   .products {
-    background:
-      linear-gradient(rgda(243, 244, 246, 065) rgda(243, 244, 246, 065)),
-      url(../public/imgs/products-bg.png);
-
+    background-image: url("../imgs/products-bg.png");
+    background-repeat: no-repeat;
+    height: 900px;
   }
 }
 
@@ -173,11 +172,11 @@
 ========================= */
 
 @layer utilities {
-  .bg-home-mobile {
-    background-image: url("../imgs/headerBgMobile.webp");
-  }
-
   .bg-home-desktop {
     background-image: url("../imgs/headerBgDesktop.webp");
+  }
+
+  .bg-home-mobile {
+    background-image: url("../imgs/headerBgMobile.webp");
   }
 }
