@@ -16,7 +16,7 @@
     </script>
   </head>
 
-  <body class="font-Dana bg-gray-100 dark:bg-zinc-800 h-[2000px]">
+  <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
     <!-- All App Icon -->
 
     <svg class="hidden">
@@ -178,7 +178,7 @@
       </symbol>
 
       <symbol
-        id="x-mark"
+        id="x-mark-mini"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -308,6 +308,19 @@
           clip-rule="evenodd"
         />
       </symbol>
+
+      <symbol
+        id="chevron-left-mini"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
     </svg>
 
     <!-- App Header -->
@@ -385,8 +398,8 @@
                   <span class="text-gray-300">1 مورد</span>
                   <a href="" class="flex items-center text-orange-300">
                     مشاهده سبد خرید
-                    <svg class="w-4 h-4">
-                      <use href="#chevron-left"></use>
+                    <svg class="w-5 h-5">
+                      <use href="#chevron-left-mini"></use>
                     </svg>
                   </a>
                 </div>
@@ -495,7 +508,7 @@
           </div>
           <div class="nav-close-btn">
             <svg class="w-6 h-6 text-zinc-600 dark:text-white">
-              <use href="#x-mark"></use>
+              <use href="#x-mark-mini"></use>
             </svg>
           </div>
         </div>
@@ -525,7 +538,7 @@
 
               <span class="submenu-open-btn">
                 <svg class="w-4 h-4">
-                  <use href="#chevron-down"></use>
+                  <use href="#chevron-down-mini"></use>
                 </svg>
               </span>
             </div>
@@ -640,7 +653,7 @@
         >
           <div class="cart-close-btn">
             <svg class="w-6 h-6 text-zinc-600 dark:text-white">
-              <use href="#x-mark"></use>
+              <use href="#x-mark-mini"></use>
             </svg>
           </div>
 
@@ -782,10 +795,39 @@
         </div>
       </section>
 
-      <section class="products">
+      <section class="products pt-8 md:pt-24 mb-20">
         <div class="container">
-          <div></div>
-          <a href="#"></a>
+          <!-- Section Head -->
+          <div
+            class="mt-8 lg:mt-28 flex items-end justify-between mb-5 md:mb-12"
+          >
+            <div>
+              <h3 class="section-title">جدیدترین محصولات</h3>
+              <span class="section-subtitle">فرآوری شده از دانه قهوه</span>
+            </div>
+
+            <a href="#" class="section-link">
+              <span class="hidden md:inline-block">مشاهده همه محصولات</span>
+              <span class="inline-block md:hidden">مشاهده همه</span>
+
+              <svg class="w-5 h-5">
+                <use href="#chevron-left-mini"></use>
+              </svg>
+            </a>
+          </div>
+          <!-- Section Body -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5 child:h-[200px] child:md:h-[460px]"
+          >
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+            <div class="p-5 bg-white dark:bg-zinc-700 shadow rounded-2xl"></div>
+          </div>
         </div>
       </section>
     </main>
