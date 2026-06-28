@@ -181,9 +181,11 @@
   .section-title {
     @apply text-2xl md:text-5xl font-morabba-medium text-zinc-700 dark:text-white;
   }
+
   .section-subtitle {
     @apply inline-block text-lg md:text-3xl font-morabba-light mt-0.5 md:mt-1.5 text-zinc-700 dark:text-white;
   }
+
   .section-link {
     @apply flex items-center md:gap-x-1 text-base md:text-xl h-10 pr-3 pl-1 text-orange-300 md:hover:bg-orange-300/20 rounded-md transition-colors;
   }
@@ -215,5 +217,11 @@
 
   .bg-home-mobile {
     background-image: url("../imgs/headerBgMobile.webp");
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
   }
 }
