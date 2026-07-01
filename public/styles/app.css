@@ -451,6 +451,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -510,6 +513,9 @@
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -676,14 +682,8 @@
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
   }
-  .gap-x-\[21\] {
-    column-gap: 21;
-  }
-  .gap-x-\[29\] {
-    column-gap: 29;
-  }
-  .gap-x-\[29px\] {
-    column-gap: 29px;
+  .gap-x-\[18px\] {
+    column-gap: 18px;
   }
   .gap-y-1 {
     row-gap: var(--spacing);
@@ -1048,6 +1048,13 @@
       }
     }
   }
+  .hover\:bg-gray-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-300);
+      }
+    }
+  }
   .hover\:bg-teal-600 {
     &:hover {
       @media (hover: hover) {
@@ -1156,9 +1163,19 @@
       height: calc(var(--spacing) * 9);
     }
   }
+  .md\:h-10 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .md\:h-14 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:h-\[26px\] {
+    @media (width >= 48rem) {
+      height: 26px;
     }
   }
   .md\:h-\[30px\] {
@@ -1186,6 +1203,11 @@
       width: calc(var(--spacing) * 9);
     }
   }
+  .md\:w-10 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
   .md\:w-50 {
     @media (width >= 48rem) {
       width: var(--spacing-50);
@@ -1194,6 +1216,11 @@
   .md\:w-\[22px\] {
     @media (width >= 48rem) {
       width: 22px;
+    }
+  }
+  .md\:w-\[26px\] {
+    @media (width >= 48rem) {
+      width: 26px;
     }
   }
   .md\:w-auto {
@@ -1451,11 +1478,29 @@
       }
     }
   }
+  .dark\:hover\:bg-white {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
   .dark\:hover\:text-emerald-500 {
     &:where(.dark, .dark *) {
       &:hover {
         @media (hover: hover) {
           color: var(--color-emerald-500);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-zinc-700 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-zinc-700);
         }
       }
     }
